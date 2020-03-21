@@ -36,3 +36,5 @@ RUN apt-get install -y php7.3 \
                        php7.3-zip \
                        php7.3-gd \
                        php7.3-cgi
+                       
+EXPOSE 9000                   
