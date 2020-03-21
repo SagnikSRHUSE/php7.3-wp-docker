@@ -36,5 +36,8 @@ RUN apt-get install -y php7.3 \
                        php7.3-zip \
                        php7.3-gd \
                        php7.3-cgi
-                       
+
+STOPSIGNAL SIGQUIT
+
 EXPOSE 9000                   
+CMD ["php-fpm"]
