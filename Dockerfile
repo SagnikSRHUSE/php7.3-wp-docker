@@ -40,4 +40,4 @@ RUN apt-get install -y php7.3 \
 STOPSIGNAL SIGQUIT
 
 EXPOSE 9000                   
-CMD ["php-fpm"]
+CMD ["php-fpm7.3"]
