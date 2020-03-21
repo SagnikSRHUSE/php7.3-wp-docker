@@ -9,7 +9,8 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update \
     && apt-get dist-upgrade -y \
     && apt-get autoremove -y \
-    && apt-get autoclean
+    && apt-get autoclean \
+    && apt-get install -y wget
 
 # Add PHP Repo
 RUN apt-get install -y apt-transport-https lsb-release ca-certificates curl \
