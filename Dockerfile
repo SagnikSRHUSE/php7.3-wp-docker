@@ -43,4 +43,4 @@ RUN sed -i 's,/run/php/php7.3-fpm.sock,9000,g' /etc/php/7.3/fpm/pool.d/www.conf
 STOPSIGNAL SIGQUIT
 
 EXPOSE 9000                   
-CMD ["php-fpm7.3"]
+CMD ["systemctl start php7.3-fpm"]
