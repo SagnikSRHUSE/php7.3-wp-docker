@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM debian:buster
 
 MAINTAINER Sagnik Sasmal, <sagnik@sagnik.me>
 
