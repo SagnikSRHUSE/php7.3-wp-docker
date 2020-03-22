@@ -39,8 +39,9 @@ RUN apt-get install -y php7.3 \
 
 # Change PHP-FPM port from UNIX Socker to port 9000
 RUN sed -i 's,/run/php/php7.3-fpm.sock,9000,g' /etc/php/7.3/fpm/pool.d/www.conf
+RUN sed -i 's,/run/php/php7.3-fpm.pid,/run/php7.3-fpm.pid,g' /etc/php/7.3/fpm/php-fpm.conf
 
 STOPSIGNAL SIGQUIT
 
 EXPOSE 9000                   
-CMD ["systemctl start php7.3-fpm"]
+CMD ["php-fpm7.3"]
